@@ -34,10 +34,10 @@ Il progetto permette di inserire, modificare, eliminare e filtrare film, visuali
 ## API
 
 -L’app utilizza MockAPI per la gestione dei dati tramite REST API:
-GET → Recupero lista film
-POST → Aggiunta nuovo film
-PUT → Modifica film esistente
-DELETE → Rimozione film
+-GET Recupero lista film
+-POST Aggiunta nuovo film
+-PUT Modifica film esistente
+-DELETE Rimozione film
 
 
 ---
