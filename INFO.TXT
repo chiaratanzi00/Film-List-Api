@@ -1,0 +1,14 @@
+
+// eseguire il progetto sviluppato con node : "npm run script" (dove lo script ha un nome)
+
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000" 
+  },
+
+  in questo script chiamato a mia scelta "start" esegue un comando che avvia la libreria JSON-server
+
+  --WATCH ( CHE RIMANE IN ASCOLTO )
+
+  db.json -> è il mio db con i dati json
+
+  --port 3000 -> è la porta che espone l API

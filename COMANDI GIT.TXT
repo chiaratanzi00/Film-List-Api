@@ -1,0 +1,137 @@
+---------------------------------------------- WINDOWS --------------------------------------------------------
+
+
+1)INSTALLAZIONE GIT sul PC  andare sul sito : 
+
+    https://git-scm.com/install/  -> scegliere SO e scaricare il software
+
+    LASCIARE TUTTE LE IMPOSTAZIONI PREDEFINITE
+
+    nella schermata "adjusting your PATH envirovment" seleziona : git from the commando line and also 3rd part software"
+
+    aprire windows powershell per verificare l installazione : git --version
+
+
+2)CONFIGURAZIONE SSH(GITHUB)
+
+    aprire windows powershell da administrator e scrivere : 
+
+        ssh-keygen -t rsa -b 4096 -C "mail@esempio.it"
+
+        procedere con INVIO e NON inserire password quindi premi INVIO
+
+        AVVIARE L AGENTE SSH : eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_ed25519
+
+        copiamo la chiave pubblica : clip < ~/.ssh/id_ed25519.pub
+
+
+    aggiungiamo la chiave al profilo GITHUB :
+
+        SETTINGS-> KEYS 
+        New SSH key
+        dai un nome alla chiave
+        incolla la chiave nel campo key
+        add ssh key
+
+    verifica connessione :
+
+
+        terminale di vscode : ssh -T git@github.com   -> res : Hi....you have....
+
+
+    confgurazione di github globale :
+
+        git config --global user.name "il tuo nome"
+        git config --global user.email "la_tua_email"
+
+        verifica : git config --list
+
+
+---------------------------------------------- MAC --------------------------------------------------------
+
+
+
+0)Installazione MAC andare sul sito : 
+
+    https://git-scm.com/install/  -> scegliere SO e scaricare il software
+
+
+    confgurazione di github globale :
+
+        git config --global user.name "il tuo nome"
+        git config --global user.email "la_tua_email"
+
+        verifica : git config --list
+
+
+    Se si presentano errori del tipo:     zsh : command not found: git 
+        
+        export PATH="/usr/local/git/bin:$PATH"
+        source 
+
+
+
+---------------------------------------------- UTILIZZO --------------------------------------------------------
+
+git init                            -> inizializza il progetto
+
+git commit -m  "messaggio"          -> committa modifiche
+
+git add .                           ->  aggiunge file al commit
+
+git push origin main                -> pusha file sulla repo github 
+
+git pull                            -> prende le modifiche dalla repo 
+
+git clone repo (ssh)                -> clona una repository
+
+
+    SEQUENZA :  git init  ( va fatto solo una volta per ogni progetto )
+                git add .
+                git commit -m "messaggio del commit"
+
+                crea repo su github
+                prendi l URL SSH
+                git remote add origin + URL SSH
+                git push -u origin main     ( se il branch è il master scrivi master anzichè main)
+
+        solo la prima volta che si connette chiederà la conferma edlla chiave e premi "yes"
+
+
+
+
+---------------------------------------------- RIPRISTINO DI UN PROGETTO  --------------------------------------------------------
+
+Capita di avere problemi con GIT. 
+
+Se vogliamo ripristinare e reinizializzare un progetto con GIT dobbiamo andare nella cartella del progetto,
+attivare la vsualizzazione delle cartelle nascoste e cancellare ( con vscode chiuso ) la cartella .GIT
+dopodichè possiamo reinizializzare il progetto con il comando 
+
+        git init
+
+
+
+---------------------------------------------- CREARE  FILE .gitignore  --------------------------------------------------------
+
+
+NON dobbiamo pushare ( quindi inviare alla repo ) la cartella NODE_MODULES e IL FILE PACKAGE-LOCK.JSON
+
+Quindi creiamo un file chiamato .gitignore  ed inseriamo cio' che vogliamo ignorare per il push.
+
+quindi :    node_modules/
+
+            .env   (file che generalmente contengono credenziali e quindi non vogliamo pushare le nostre credenziali)
+
+
+
+------------------------------------------------------ FILE README  --------------------------------------------------------
+
+
+
+Il file README che inizialmente è vuoto, 
+dovrà contenere informazioni e descrizione del progetto (screenshot, comandi per avviare il progetto etc..)
+
+Il tipo di scrittura di questo file è in formato MARKUP, quindi abbiamo alcuni stili di scrittura per ogni elemento,
+che sarà visualizzato in modo differente.
+

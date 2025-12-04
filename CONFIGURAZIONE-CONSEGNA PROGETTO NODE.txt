@@ -1,0 +1,143 @@
+-------------------------------------CONFIGURAZIONE DI UN PROGETTO CON NODE ----------------------------------------
+
+Quando decido di avere un ambiente sviluppato con Node e Npm, devo seguire questi passaggi : 
+
+
+1) creo la cartella sul desktop. Il nome della cartella NON deve avere SPAZI quindi :
+
+          si camelCase, si MAIUSCOLO , si minuscolo , si trattino basso
+
+
+2) Creare cartella all interno della cartella Madre creata aprendo il terminale e digitando :
+
+          mkdir nomecartella 
+
+    a seguire entriamo nella cartella appena creata digitando
+
+          cd[spazio]+TAB -> scegliamo la cartella creata che ci suggerisce il TAB
+
+          premiamo INVIO e siamo dentro la cartella figlio.
+
+
+3) INIZIALIZZAZIONE del progetto con NODE :
+
+          Nel terminale, eseguiamo il comando :
+
+            npm init -y
+
+    Node, inizializza il progetto e crea il file PACKAGE.JSON , un file strutturato in questo modo:
+
+          {
+            "name": "progetto",
+            "version": "1.0.1",
+            "description": "Questo è un progetto che utilizza le Api",
+            "main": "index.js",
+            "scripts": {
+              "start": "json-server --watch db.json --port 3000" 
+            },
+            "keywords": [],
+            "author": "Classe FullstackDev",
+            "license": "ISC",
+            "dependencies": {
+              "bootstrap": "^5.3.8",
+              "json-server": "^1.0.0-beta.3"
+            }
+          }
+
+    Esso conterrà le informazioni del progetto, e comandi da eseguire.
+    Possiamo considerarlo come una sorta di "ricetta" per la gestione delle dipendenze o librerie.
+
+        es. di librerie
+
+            "dependencies": {
+              "bootstrap": "^5.3.8",
+              "json-server": "^1.0.0-beta.3"
+            }
+
+        es. di comandi avviabili da terminale
+
+            "scripts": {
+              "start": "json-server --watch db.json --port 3000" 
+            },
+
+
+4) INSTALLAZIONE di librerie nel progetto : 
+
+    Node utilizza NPM (Node package manager) ovvero il gestore per l installazione delle librerie
+
+      possiamo andare sul sito https://www.npmjs.com/ e cercare le librerie di nostro interesse 
+      che vogliamo istallare dentro a questo progetto
+
+    Scelta la libreria, lanciamo il comando per l installazione :
+
+      npm install nome_libreria
+                o
+      npm i nome nome_libreria
+
+        se voglio una versione specifica:  npm install nome_libreria@numero_versione 
+                                           es. : bootstrap@5.3.8
+
+
+5) AVVIO DEL PROGRAMMA o progetto :
+
+      DAL terminale lanciare i comandi che avviano gli script del file package.json
+
+        es. : npm run nome_script  
+
+      generalmente sono : npm run start, npm run build, npm run test, npm run dev
+
+
+
+
+--------------------------------------ALCUNI COMANDI-----------------------------------------
+
+
+
+
+INIZIALIZZAZIONE : npm init -y
+INSTALLAZIONE DI LIBRERIE : npm install nomelibreria
+DISINSTALLAZIONE DI LIBRERIE : npm uninstall nomelibreria
+
+
+
+// come creare cartella figlio della cartella del progetto  : mkdir nomecartella
+// rimuovere cartella                                       : rmdir nomecartella
+// andare nel path della cartella                           : cd + TAB (suggerimenti delle cartelle) e INVIO per selezione
+// salire alla cartella padre                               : cd ..    (lo spazio dopo cd!)
+// pulire il terminale                                      : clear
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------CONSEGNA PROGETTO CON NODE-------------------------------------------------------------------------
+
+
+---------------------------------------------------- INVIO, CONSEGN , PACCHETTO ---------------------------------------------------
+
+Il progetto va consegnato senza la cartella 
+
+    node_modules e package-lock.json
+
+per evitare passaggi di dati eccessivi, quindi vanno eliminati prima di fare il "pacchetto" di consegna
+
+
+
+------------------------------------------------------  RICEZIONE O CLONE ---------------------------------------------
+
+
+Quando riceviamo un progetto quindi, dato che non abbiamo questi file,
+dobbiamo lanciare il comando per scaricare tutte le librerie descritte 
+nell unico file che abbiamo
+
+    ovvero il package.json
+
+quindi lanciamo il comando :   npm istall
+
+Node, in questo modo, scaricherà tutte le librerie o dipendenze del progetto.

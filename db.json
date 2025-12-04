@@ -1,0 +1,44 @@
+{
+  "films": [
+    {
+      "id": "179b",
+      "title": "Magnolia",
+      "regista": "Thomas Anderson",
+      "voto": "6",
+      "date": "20/11/2022",
+      "time": "18:00"
+    },
+    {
+      "id": "d747",
+      "title": "Inception",
+      "regista": "Christopher Nolan",
+      "voto": "7",
+      "date": "20/11/2022",
+      "time": "18:00"
+    },
+    {
+      "id": "6d00",
+      "title": "Parnassus",
+      "regista": "Christopher Plummer",
+      "voto": "9",
+      "date": "29/11/2024",
+      "time": "18:00"
+    },
+    {
+      "id": "8ba5",
+      "title": "cenerentolas",
+      "regista": "disneys",
+      "voto": "8",
+      "date": "2025-10-09",
+      "time": "11:30"
+    },
+    {
+      "id": "60c1",
+      "title": "Avatar",
+      "regista": "",
+      "voto": "",
+      "date": "",
+      "time": ""
+    }
+  ]
+}

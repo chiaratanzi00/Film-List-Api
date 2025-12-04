@@ -1,0 +1,122 @@
+body{
+
+    font-family: "Montserrat", sans-serif;
+    background: #833AB4;
+    background: #333;
+    margin: 0;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+}
+
+h1 {
+
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;   
+    color: white;
+
+}
+
+h1 i {
+
+    margin-right: 10px;
+    color: #FFCA2C;
+}
+
+
+
+.form-card{
+
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 40px;
+
+}
+
+
+.film-card{
+
+    background: #ffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+
+
+}
+
+.film-card:hover {
+
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.film-title{
+
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+
+}
+
+
+
+.film-details{
+
+    font-size: 1rem;
+    color: #555;
+
+}
+
+
+.film-action button {
+
+    margin-left: 10px;
+
+}
+
+
+#add-film {
+
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+
+canvas {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.modal-content{
+
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.2);
+}
+
+.modal-header{
+
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .film-card {
+        padding: 16px;
+    }
+    .film-title {
+        font-size: 1rem;
+    }
+}
