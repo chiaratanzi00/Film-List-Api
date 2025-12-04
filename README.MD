@@ -56,7 +56,9 @@ DELETE → Rimozione film
 
 ---
 
+
 ## Tecnologie Utilizzate
+
 -Html
 -Css3
 -Bootstrap 5
@@ -66,6 +68,7 @@ DELETE → Rimozione film
 -Chart.js
 -Node.js
 -VS Code
+
 ---
 
 
